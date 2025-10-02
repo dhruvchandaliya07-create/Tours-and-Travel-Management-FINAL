@@ -43,7 +43,7 @@ function HomePage() {
     <div style={{ padding: '50px', textAlign: 'center' }}>
       <h1>Welcome to Sky Line Tours and Travels!!</h1>
       <p>Your adventure starts here. Explore our exclusive tours.</p>
-      <img src='https://www.theindiatourism.com/images/tourism-india.webp' alt='Image' width={1000} img/>
+      <img src='https://www.theindiatourism.com/images/tourism-india.webp' alt='Img' width={1000} img/>
     </div>
   );
 }
