@@ -88,7 +88,6 @@ app.get("/api/all-bookings", async (req, res) => {
     }
 });
 
-// NEW: ADD THIS ROUTE TO DELETE A BOOKING
 app.delete("/api/bookings/:id", async (req, res) => {
     try {
         const booking = await Booking.findByIdAndDelete(req.params.id);
@@ -114,13 +113,9 @@ app.get("/api/admin/stats", async (req, res) => {
     }
 });
 
-// The Seeder Route (Updated with verified Indian Tour images)
 app.get("/api/seed", async (req, res) => {
   try {
-    // This deletes all old tours before adding the new list
     await Tour.deleteMany({});
-
-    // The new array now contains 6 Indian tours
     const sampleTours = [
       {
         name: "Golden Triangle Journey",
